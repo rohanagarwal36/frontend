@@ -1,0 +1,41 @@
+<div class="jumbotron text-center">
+    <h2>Edit your profile</h2>
+</div>
+
+<div class="container col-sm-4 col-sm-offset-4">
+    <div class="help-block with-errors alert-warning">{{errorMessage}}</div>
+    <form ng-submit="edit()">
+        <div class="form-group">
+            <label for="register_email">Email</label>
+            <input type="email" class="form-control" id="register_email" ng-model="email"
+                   placeholder={{email}} required/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" ng-model="password" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" ng-model="firstName"
+                   placeholder="ex. Rohan" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" ng-model="lastName"
+                   placeholder="ex. Agarwal" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" ng-model="age"
+                   placeholder="Age must be >= 18" required min="18"/>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+</div>

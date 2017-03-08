@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href ng-click = "home()">Home</a></li>
+      <li><a href ng-click = "login()">Login</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+    <h2>Register</h2>
+</div>
+
+<div class="container col-sm-4 col-sm-offset-4">
+    <form ng-submit="register()">
+        <div class="help-block with-errors alert-danger">{{error.email[0]}}</div>
+        <div class="form-group">
+            <label for="register_email">Email</label>
+            <input type="email" class="form-control" id="register_email" ng-model="user.email"
+                   placeholder="ex. john@notgoogle.com" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" ng-model="user.password" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" ng-model="user.first_name"
+                   placeholder="ex. Rohan" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" ng-model="user.last_name"
+                   placeholder="ex. Agarwal" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" ng-model="user.age"
+                   placeholder="Age must be >= 18" required min="18"/>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>

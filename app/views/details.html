@@ -1,0 +1,36 @@
+<div class="jumbotron text-center">
+    <h1>Welcome {{user.first_name}}</h1>
+</div>
+
+<div class="container text-center">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <label>First Name:</label>
+            <span>{{user.first_name}}</span>
+            <br>
+            <label>Last Name:</label>
+            <span>{{user.last_ame}}</span>
+            <br>
+            <label>Email:</label>
+            <span>{{user.email}}</span>
+            <br>
+            <label>Age:</label>
+            <span>{{user.age}}</span>
+        </div>
+
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-lg-5"></div>
+                <div class="col-lg-1">
+                    <button type="button" class="btn btn-primary" ng-click="logout()">Logout</button>
+                </div>
+
+                <div class="col-lg-1">
+                    <button type="button" class="btn btn-primary" ng-click="onClickEdit()">Edit Profile</button>
+                </div>
+                <div class="col-lg-5"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
